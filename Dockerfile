@@ -8,13 +8,13 @@ WORKDIR /app
 ENV FLASK_APP=flaskr
 
 COPY requirements/base.txt ./requirements/base.txt
-RUN pip3 install -r requirements/base.txt
+RUN pip3 install -r /requirements/base.txt
 COPY flaskr ./flaskr
 
 #FROM base as testing
 
 #COPY requirements/test.txt ./requirements/test.txt
-#RUN pip3 install -r /requirements/test.txt
+#RUN pip3 install -r requirements/test.txt
 
 #COPY pytest.ini ./pytest.ini
 #COPY .coveragerc ./.coveragerc
