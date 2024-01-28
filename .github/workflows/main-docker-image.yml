@@ -1,17 +1,1 @@
-name: Main Docker Image CD
 
-on:
-  push:
-    branches: [ "main" ]
-
-jobs:
-
-  buildpush:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3
-
-    - name: Build Docker image for development
-      run: docker build --target development . --tag flask-mio:dev
