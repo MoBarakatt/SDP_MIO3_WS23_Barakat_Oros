@@ -1,7 +1,7 @@
-import random
-
+import os
 
 class Hardware:
-
     def get_cpu_temp(self):
-        return random.uniform(30.0, 40.0)
+        with open("/sys/class/thermal/thermal_zone0/temp", "r") as file:
+            temp = float(file.read()) / 1000
+        return temp
