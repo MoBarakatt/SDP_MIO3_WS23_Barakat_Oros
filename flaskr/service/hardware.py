@@ -5,3 +5,4 @@ class Hardware:
         with open("/sys/class/thermal/thermal_zone0/temp", "r") as file:
             temp = float(file.read()) / 1000
         return temp
+
