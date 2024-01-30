@@ -1,6 +1,3 @@
-FROM python:3.9-alpine as base
-
-RUN apk update
 FROM arm32v6/python:3.9-alpine as base
 
 RUN apk update
